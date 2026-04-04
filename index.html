@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambre D'Hôtes sur le Chemin de la Loire à Vélo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Styles Généraux */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9fbf9;
+            text-align: left;
+        }
+
+        /* En-tête & Navigation */
+        header {
+            background: #fff;
+            padding: 1rem 3%; /* Réduit pour laisser plus de place latérale */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold; 
+            font-size: 1.1rem; /* Ajusté pour la longueur du texte */
+            color: #4a6741; 
+            white-space: nowrap; /* FORCE LE TITRE SUR UNE SEULE LIGNE */
+            flex-shrink: 0; /* Empêche le titre de se compresser */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a { 
+            margin-left: 15px; 
+            text-decoration: none; 
+            color: #555; 
+            font-weight: 500;
+            font-size: 0.95rem; /* Légèrement réduit pour le menu */
+        }
+        
+        nav a:hover { color: #4a6741; }
+
+        /* Section Hero */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('images/IMG_5558.JPG') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.5rem; }
+
+        /* Contenu Principal */
+        .container { padding: 4rem 10%; }
+        
+        h2 { 
+            font-family: 'Montserrat', sans-serif;
+            text-align: left; 
+            color: #4a6741; 
+            margin-bottom: 2rem; 
+            font-size: 2rem;
+            border-left: 5px solid #4a6741;
+            padding-left: 15px;
+        }
+
+        /* Section Notre Chambre */
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2rem;
+            color: #444;
+            max-width: 900px;
+        }
+
+        /* Galerie */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item img:hover { transform: scale(1.05); }
+
+        /* Formulaire */
+        .contact-form {
+            max-width: 700px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        button {
+            background-color: #4a6741;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: #384e31; }
+
+        footer { text-align: center; padding: 2rem; background: #333; color: white; margin-top: 3rem; }
+
+        /* Ajustements Mobile */
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .logo { white-space: normal; margin-bottom: 10px; font-size: 1rem; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Chambre d'Hôtes Sur le Chemin de la Loire à Vélo</div>
+        <nav>
+            <a href="#chambres">La Chambre</a>
+            <a href="#Galerie">Galerie</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Évadez-vous en bord de Loire</h1>
+        <p>Découvrez ses magnifiques paysages</p>
+    </section>
+
+    <section id="chambres" class="container">
+        <h2>Situation</h2>
+        <div class="card">
+            <p>Situé sur la route de la <strong>Loire à Vélo</strong>, ce charmant hébergement très cosy dans une ancienne maison rénovée, vous offrira paix et tranquillité sans vous dérouter.</p>
+            
+            <p>La chambre est climatisée et équipée d'une TV, d'une cafetière Nespresso et d'un lit parapluie pour un enfant de 0 à 3 ans. Vous disposerez d'un accès à internet (fibre) via Wi-Fi.</p>
+            
+            <p>Vous aurez un accès indépendant par une porte d'entrée, débouchant dans une <strong>entrée salon meublée</strong> d'un canapé pour vous détendre. L'accès à votre chambre se fait directement depuis cet espace par un escalier.</p>
+            
+            <p><strong>Amis cyclistes :</strong> vos vélos seront remisés dans un local sécurisé sous la chambre. Vous y trouverez un frigo à votre disposition et un évier pour laver votre vaisselle ou rincer votre linge.</p>
+            
+            <p>À proximité, vous trouverez des restaurants ainsi qu'une guinguette en bord de Loire l'été, accessible en 10 minutes à pied. Un petit déjeuner continental est possible sur demande à votre arrivée.</p>
+        </div>
+    </section>
+
+    <section id="Galerie" class="container">
+        <h2>Galerie Photos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/La_Maison.JPG" alt="Notre Maison"></div>
+            <div class="gallery-item"><img src="images/Le_lit.jpg" alt="La chambre"></div>
+            <div class="gallery-item"><img src="images/La_salle_de_bain_.jpg" alt="Salle de bain"></div>
+            <div class="gallery-item"><img src="images/entrée_salon.jpg" alt="Entrée salon"></div>
+            <div class="gallery-item"><img src="images/Local_vélo.jpg" alt="Local vélo sécurisé"></div>
+            <div class="gallery-item"><img src="images/La_Loire.jpg" alt="Bords de Loire"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="background-color: #f1f5f0;">
+        <h2>Réserver votre séjour</h2>
+<div class="contact-form">
+    <form action="mailto:sgodicheau@yahoo.com" method="post" enctype="text/plain">
+        <input type="text" name="Nom" placeholder="Votre Nom" required>
+        <input type="email" name="Email" placeholder="Votre Email" required>
+        <textarea name="Message" rows="5" placeholder="Dates souhaitées et message..."></textarea>
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Chambre d'Hôtes - Sur le Chemin de la Loire à Vélo</p>
+    </footer>
+
+</body>
+</html>
